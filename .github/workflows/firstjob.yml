@@ -5,13 +5,14 @@ on:
 
 jobs: 
     first_job: 
+        name: humble
         runs-on: ubuntu-latest
         steps:
             - name: Welcome Message
               run: echo "My first GitHu Actions Job"
 
             - name: List Files 
-              run: ls 
+              run: ls 1-a
 
-            - name: Read file 
-              run: cat dockerfile
+            - name: show current directory
+              run: pwd
