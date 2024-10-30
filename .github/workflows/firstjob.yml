@@ -12,7 +12,7 @@ jobs:
               run: echo "My first GitHu Actions Job"
 
             - name: List Files 
-              run: ls 1-a
+              run: ls -a
 
             - name: show current directory
               run: pwd
