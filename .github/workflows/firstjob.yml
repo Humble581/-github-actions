@@ -1,17 +1,17 @@
-name: First Workflow
+# name: First Workflow
 
-on:
-  - push
+# on:
+#   - push
 
-jobs: 
-    first_job: 
-        runs-on: ubuntu-latest
-        steps:
-            - name: Welcome Message
-              run: echo "My first GitHu Actions Job"
+# jobs: 
+#     first_job: 
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: Welcome Message
+#               run: echo "My first GitHu Actions Job"
 
-            - name: List Files 
-              run: ls 
+#             - name: List Files 
+#               run: ls 
 
-            - name: Read file 
-              run: pwd
+#             - name: Read file 
+#               run: pwd
