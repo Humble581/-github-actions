@@ -4,7 +4,6 @@ on:
   - push
 
 jobs: 
-    name: ASCII
     first_job: 
         runs-on: ubuntu-latest
         steps:
