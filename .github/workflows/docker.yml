@@ -28,5 +28,5 @@ jobs:
       - name: Docker Login
         run: docker login --username=efotsowoe --password=ricewater!!233
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker.io/efotsowoe/resume-app:latest
+        run: docker run -d -p 8080:80 docker push humble15/humble581.io:latest
 
