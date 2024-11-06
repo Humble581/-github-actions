@@ -17,7 +17,7 @@ jobs:
       run: docker build -f ./Dockerfile -t humble15/jeremiah-aidoo-github-actions:latest .
 
     - name: Docker Login
-      run: echo "Humble@1997" | docker login --username=humble15 --password=Humble@1997
+      run: docker login --username=humble15 --password=Humblehak@1997
 
     - name: Docker Publish 
       run: docker push humble15/jeremiah-aidoo-github-actions:latest
@@ -30,9 +30,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Docker Login
-        run: echo "Humble@1997" | docker login --username humble15 --password-stdin
+      run: docker login --username=humble15 --password=Humblehak@1997
 
       - name: Docker Run
         run: docker run -d -p 8080:80 humble15/jeremiah-aidoo-github-actions:latest
+
 
 
