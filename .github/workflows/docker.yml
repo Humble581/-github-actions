@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Docker Build 
-      run: docker build -t docker build humble15/jeremiah-aidoo-github-actions .
+      run: docker build -t humble15/jeremiah-aidoo-github-actions:latest .
 
     - name: Docker Login
       run: docker login --username=humble15 --password=Humble@1997
@@ -28,4 +28,4 @@ jobs:
       - name: Docker Login
         run: docker login --username=humble15 --password=Humble@1997
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker.humble15/jeremiah-aidoo-github-actions:latest
+        run: docker run -d -p 8080:80 humble15/jeremiah-aidoo-github-actions:latest
