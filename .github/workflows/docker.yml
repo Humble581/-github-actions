@@ -11,13 +11,13 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Docker Build 
-      run: docker build -t docker.io/efotsowoe/resume-app:latest .
+      run: docker build -t  humble15/humble581.io:latest .
 
     - name: Docker Login
-      run: docker login --username=efotsowoe --password=ricewater!!233
+      run: docker login --username=humble15 --password=Humble@1997
 
     - name: Docker Publish 
-      run: docker push docker.io/efotsowoe/resume-app:latest
+      run: docker push humble15/humble581.io:latest
 
   docker_deploy:
     needs: docker_build
@@ -26,6 +26,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
       - name: Docker Login
-        run: docker login --username=efotsowoe --password=ricewater!!233
+        run: docker login --username=humble15 --password=Humble@1997
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker.io/efotsowoe/resume-app:latest
+        run: docker run -d -p 8080:80 docker.io/humble15/humble581.io:latest
