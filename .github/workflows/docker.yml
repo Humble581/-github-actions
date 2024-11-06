@@ -10,6 +10,9 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
+    - name: List files to verify Dockerfile location
+      run: ls -l
+
     - name: Docker Build 
       run: docker build -f ./Dockerfile -t humble15/jeremiah-aidoo-github-actions:latest .
 
@@ -31,3 +34,4 @@ jobs:
 
       - name: Docker Run
         run: docker run -d -p 8080:80 humble15/jeremiah-aidoo-github-actions:latest
+
