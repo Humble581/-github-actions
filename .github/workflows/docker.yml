@@ -11,13 +11,13 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Docker Build 
-      run: docker build -t  humble15/humble581.io:latest .
+      run: docker build -t docker build humble15/jeremiah-aidoo-github-actions .
 
     - name: Docker Login
       run: docker login --username=humble15 --password=Humble@1997
 
     - name: Docker Publish 
-      run: docker push humble15/humble581.io:latest
+      run: docker push humble15/jeremiah-aidoo-github-actions:latest
 
   docker_deploy:
     needs: docker_build
@@ -28,4 +28,4 @@ jobs:
       - name: Docker Login
         run: docker login --username=humble15 --password=Humble@1997
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker.io/humble15/humble581.io:latest
+        run: docker run -d -p 8080:80 docker.humble15/jeremiah-aidoo-github-actions:latest
